@@ -7,6 +7,7 @@
   max-width: 940px;
   margin: 28px auto;
   border: 1px solid #eeeeee;
+
 }
 
 .timeline-list {
@@ -43,4 +44,5 @@
   height: 20px;
   background-color: #00c2bc;
   border-radius: 10px;
+  z-index: 1;
 }

@@ -35,6 +35,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import "swiper/css";
 import { Link as Scroll } from "react-scroll";
+import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 
 function App() {
   const [state, setState] = React.useState({
@@ -59,6 +60,7 @@ function App() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
+      <Scroll to='jumphome' smooth='true' onClick={toggleDrawer(anchor,false)}>
       <List>
         <ListItem>
           <ListItemButton>
@@ -69,6 +71,7 @@ function App() {
           </ListItemButton>
         </ListItem>
       </List>
+      </Scroll>
       <Divider />
       <Scroll
         to="jumpskill"
@@ -88,14 +91,28 @@ function App() {
       </Scroll>
       <Divider />
       <List>
+        <Scroll to="jumpcareer" smooth='true' onClick={toggleDrawer(anchor,false)}>
         <ListItem>
           <ListItemButton>
             <ListItemIcon>
-              <AccountCircleIcon />
+              <WorkspacePremiumIcon></WorkspacePremiumIcon>
+            </ListItemIcon>
+            <ListItemText primary={"CAREER"} />
+          </ListItemButton>
+        </ListItem>
+        </Scroll>
+      </List>
+      <List>
+        <Scroll to="jumpabout" smooth='true' onClick={toggleDrawer(anchor,false)}>
+        <ListItem>
+          <ListItemButton>
+            <ListItemIcon>
+              <AccountCircleIcon></AccountCircleIcon>
             </ListItemIcon>
             <ListItemText primary={"ABOUT"} />
           </ListItemButton>
         </ListItem>
+        </Scroll>
       </List>
     </Box>
   );
@@ -127,8 +144,8 @@ function App() {
   }
   return (
     <>
-    <div style={{backgroundColor:'black',width:'100%'}}>
-      <div style={{ display: "flex", height: "9vh", backgroundColor: "black" }}>
+    <div id='jumphome' style={{backgroundColor:'black',width:'100%'}}>
+      <div style={{ display: "flex", height: "8vh", backgroundColor: "black",position:'fixed',width:'100%',zIndex:'2'}}>
         <div>
           <h1 style={{ fontSize: "3vh", color: "white" }}>Junya Kuramochi</h1>
         </div>
@@ -152,8 +169,9 @@ function App() {
       </div>
       <div
         style={{
-          height: "91vh",
+          height: "92vh",
           backgroundColor: "black",
+          paddingTop:'9vh'
         }}
       >
         <div
@@ -186,8 +204,8 @@ function App() {
         </div>
       </div>
 
-      <div style={{backgroundColor:'white'}}>
-      <div id="jumpskill" >
+      <div id="jumpskill" style={{backgroundColor:'white',paddingTop:'8vh'}}>
+      <div  >
         <h1 style={{color:'black'}}>SKILL</h1>
       </div>
       <div style={{ textAlign: "center",backgroundColor:'white'}}>
@@ -361,6 +379,11 @@ function App() {
       </div>
       </div>
       </div>
+      <div id='jumpcareer' style={{paddingTop:'8vh'}}>
+        <h1>
+          CAREER
+        </h1>
+      </div>
       <div class="timeline">
     <ul class="timeline-list">
         <li class="timeline-list-item">
@@ -385,9 +408,12 @@ function App() {
         </li>
         <li class="timeline-list-item">
             <div class="date">2023年04月</div>
-            <div class="content">外資コンサルにてエンジニアとして就業予定｡</div>
+            <div class="content">外資コンサルにてエンジニアで就業予定｡</div>
         </li>
     </ul>
+</div>
+<div id='jumpabout' style={{paddingTop:'8vh'}}>
+  <h1>About</h1>
 </div>
     </>
   );
