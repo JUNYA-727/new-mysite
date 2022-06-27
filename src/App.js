@@ -112,7 +112,7 @@ function App() {
   const [expanded, setExpanded] = React.useState(false);
   const [expanded1, setExpanded1] = React.useState(false);
   const [expanded2, setExpanded2] = React.useState(false);
-
+  const [expanded3,setExpanded3]=React.useState(false);
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
@@ -122,8 +122,12 @@ function App() {
   const handleExpandClick2 = () => {
     setExpanded2(!expanded2);
   };
+  const handleExpandClick3=()=>{
+    setExpanded3(!expanded3);
+  }
   return (
     <>
+    <div style={{backgroundColor:'black',width:'100%'}}>
       <div style={{ display: "flex", height: "9vh", backgroundColor: "black" }}>
         <div>
           <h1 style={{ fontSize: "3vh", color: "white" }}>Junya Kuramochi</h1>
@@ -181,32 +185,12 @@ function App() {
           </Swiper>
         </div>
       </div>
-      {/*
-      <div
-        style={{
-          width: "100%",
-          paddingTop: "5%",
-        }}
-      >
-        <div style={{ display: "flex", paddingLeft: "5%", paddingRight: "5%" }}>
-          <img
-            src="main-swiper/photo1.jpg"
-            alt=""
-            width={"48%"}
-            style={{ paddingRight: "2%" }}
-          ></img>
-          <img
-            src="main-swiper/photo2.jpg"
-            alt=""
-            width={"50%"}
-            style={{ paddingTop: "5%", paddingBottom: "5%" }}
-          ></img>
-        </div>
-      </div> */}
-      <div id="jumpskill">
-        <h1>SKILL</h1>
+
+      <div style={{backgroundColor:'white'}}>
+      <div id="jumpskill" >
+        <h1 style={{color:'black'}}>SKILL</h1>
       </div>
-      <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: "center",backgroundColor:'white'}}>
         <div className="skill-card">
           <Card sx={{ maxWidth: 300 }} style={{ margin: "auto" }}>
             <CardHeader title="Python" subheader="開発経験 2021/01〜" />
@@ -255,6 +239,14 @@ function App() {
                 </Typography>
                 <Typography paragraph>
                   ･ Mask R-CNN を用いたコンクリートのひび割れ検出モデルの作成
+                </Typography>
+                <Typography paragraph>
+                <video autoPlay muted loop playsInline width={"100%"}>
+                    <source src="programming/car.mp4"></source>
+                  </video>
+                  </Typography>
+                <Typography paragraph>
+                  ･YOLOを使った物体検出モデルの作成
                 </Typography>
               </CardContent>
             </Collapse>
@@ -346,34 +338,57 @@ function App() {
             />
             <CardContent>
               <Typography variant="body2" color="text.secondary">
-                ReactはJavaScrptのフレームワーク・ライブラリの1つ。webサイトの作成といったフロントエンド開発をするにあたり確実に使われる技術。仮想DOMによってサクサクページが動くのと、スマホアプリも作れる、コードの修正もしやすい。
+                MySQLとは､最も利用されているデータベース管理システムの1つであり､webアプリケーションの顧客情報､商品情報などの様々なデータを管理することが可能になる｡
               </Typography>
             </CardContent>
             <CardActions disableSpacing>
-              <IconButton>
-                <GitHubIcon />
-              </IconButton>
               <ExpandMore
-                expand={expanded2}
-                onClick={handleExpandClick2}
-                aria-expanded={expanded2}
+                expand={expanded3}
+                onClick={handleExpandClick3}
+                aria-expanded={expanded3}
               >
                 <ExpandMoreIcon />
               </ExpandMore>
             </CardActions>
-            <Collapse in={expanded2} timeout="auto" unmountOnExit>
+            <Collapse in={expanded3} timeout="auto" unmountOnExit>
               <CardContent>
-                <Typography paragraph>使用技術</Typography>
-                <Typography>React.js</Typography>
-                <Typography paragraph></Typography>
                 <Typography paragraph>開発経験</Typography>
-                <Typography paragraph>・歯科クリニックのサイト作成</Typography>
-                <Typography paragraph>・ポートフォリオサイトの作成</Typography>
+                <Typography paragraph>･楽天株式会社の1ヶ月実務インターンにて楽天Payのデータベース分析､及びBIツールを用いた自動可視化システムの作成｡</Typography>
               </CardContent>
             </Collapse>
           </Card>
         </div>
       </div>
+      </div>
+      </div>
+      <div class="timeline">
+    <ul class="timeline-list">
+        <li class="timeline-list-item">
+            <div class="date">2021年01月</div>
+            <div class="content">Pythonでの開発を始める</div>
+        </li>
+        <li class="timeline-list-item">
+            <div class="date">2021年12月</div>
+            <div class="content">SIGNASTEにおいて異常物体検出コンペで入賞する｡</div>
+        </li>
+        <li class="timeline-list-item">
+            <div class="date">2022年03月</div>
+            <div class="content">楽天株式会社にて1ヶ月のエンジニアとして実務インターン</div>
+        </li>
+        <li class="timeline-list-item">
+            <div class="date">2022年04月</div>
+            <div class="content">フロントエンド技術のReact.jsでの開発を始める｡</div>
+        </li>
+        <li class="timeline-list-item">
+            <div class="date">2022年05月</div>
+            <div class="content">Next.jsでの開発を始める｡</div>
+        </li>
+        <li class="timeline-list-item">
+            <div class="date">2023年04月</div>
+            <div class="content">外資コンサルにてエンジニアとして就業予定｡</div>
+        </li>
+    </ul>
+</div>
     </>
   );
 }
