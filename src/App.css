@@ -122,7 +122,7 @@ animation: border_anim 2s linear forwards;
   }
 .fadeup3{
   animation-name:fadeup;
-  animation-duration: 8s;
+  animation-duration: 11s;
 }
   @keyframes fadeup{
       from{
@@ -167,7 +167,7 @@ animation: border_anim 2s linear forwards;
       }
       .fadeup6{
         animation-name:fadeup;
-        animation-duration: 10s;
+        animation-duration: 15s;
       }
         @keyframes fadeup{
             from{
