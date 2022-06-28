@@ -473,9 +473,8 @@ function App() {
       </div>
     </div>
     </div>
-   <div style={{textAlign:'center',backgroundColor:'black'}}>
-    <p style={{color:'white',margin:'0',fontSize:'1vw'}}>Thank you watching!</p>
-    <p style={{color:'white',margin:'0',fontSize:'3vw',paddingTop:'3%'}}>Junya Kuramochi</p>   
+   <div style={{textAlign:'center',backgroundColor:'black'}}>å
+    <p style={{color:'white',margin:'0',fontSize:'3vw',paddingTop:'1%'}}>Junya Kuramochi</p>   
    <IconButton
                 variant="outlined"
                 href="https://github.com/JUNYA-727"
