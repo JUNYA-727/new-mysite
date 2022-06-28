@@ -27,7 +27,6 @@ import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Collapse from "@mui/material/Collapse";
-import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -36,6 +35,8 @@ import { Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import "swiper/css";
 import { Link as Scroll } from "react-scroll";
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 function App() {
   const [state, setState] = React.useState({
@@ -147,7 +148,7 @@ function App() {
     <div id='jumphome' style={{backgroundColor:'black',width:'100%'}}>
       <div style={{ display: "flex", height: "8vh", backgroundColor: "black",position:'fixed',width:'100%',zIndex:'2'}}>
         <div>
-          <h1 style={{ fontSize: "3vh", color: "white" }}>Junya Kuramochi</h1>
+          <h1 style={{ fontSize: "3vh", color: "white",paddingLeft:'3vw'}} className='main-header'>Junya Kuramochi</h1>
         </div>
         <div style={{ marginLeft: "auto" }}>
           <React.Fragment key={"top"}>
@@ -200,18 +201,39 @@ function App() {
             <SwiperSlide>
               <img src="main-swiper/photo3.jpg" alt="" width={"100%"}></img>
             </SwiperSlide>
+            <SwiperSlide>
+              <img src="main-swiper/photo4.jpg" alt="" width={"100%"}></img>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="main-swiper/photo5.jpg" alt="" width={"100%"}></img>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="main-swiper/photo6.jpg" alt="" width={"100%"}></img>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="main-swiper/photo7.jpg" alt="" width={"100%"}></img>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="main-swiper/photo8.jpg" alt="" width={"100%"}></img>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="main-swiper/photo9.jpg" alt="" width={"100%"}></img>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="main-swiper/photo10.jpg" alt="" width={"100%"}></img>
+            </SwiperSlide>
           </Swiper>
         </div>
       </div>
 
-      <div id="jumpskill" style={{backgroundColor:'white',paddingTop:'8vh'}}>
+      <div id="jumpskill" style={{backgroundColor:'white',paddingTop:'6vh'}}>
       <div  >
-        <h1 style={{color:'black'}}>SKILL</h1>
+        <h1 style={{color:'black',textAlign:'center'}} className='test-font'>SKILL</h1>
       </div>
       <div style={{ textAlign: "center",backgroundColor:'white'}}>
         <div className="skill-card">
           <Card sx={{ maxWidth: 300 }} style={{ margin: "auto" }}>
-            <CardHeader title="Python" subheader="開発経験 2021/01〜" />
+            <CardHeader title="Python" subheader="開発経験 2020/11〜" />
             <CardMedia
               component="img"
               height="194"
@@ -258,14 +280,15 @@ function App() {
                 <Typography paragraph>
                   ･ Mask R-CNN を用いたコンクリートのひび割れ検出モデルの作成
                 </Typography>
+
+                <Typography paragraph>
+                  ･YOLOを使った物体検出モデルの作成
+                </Typography>
                 <Typography paragraph>
                 <video autoPlay muted loop playsInline width={"100%"}>
                     <source src="programming/car.mp4"></source>
                   </video>
                   </Typography>
-                <Typography paragraph>
-                  ･YOLOを使った物体検出モデルの作成
-                </Typography>
               </CardContent>
             </Collapse>
           </Card>
@@ -304,6 +327,9 @@ function App() {
                 <Typography paragraph>開発経験</Typography>
                 <Typography paragraph>・歯科クリニックのサイト作成</Typography>
                 <Typography paragraph>・ポートフォリオサイトの作成</Typography>
+                <Typography paragraph>
+                  <img src='programming/flow.jpg' alt='flow' width={'100%'}></img>
+                </Typography>
               </CardContent>
             </Collapse>
           </Card>
@@ -340,8 +366,11 @@ function App() {
                 <Typography>Next.js</Typography>
                 <Typography paragraph></Typography>
                 <Typography paragraph>開発経験</Typography>
-                <Typography paragraph>・ポートフォリオサイトの作成</Typography>
-              </CardContent>
+                <Typography paragraph>・ポートフォリオサイトの作成(SEO対策にて満点)</Typography>
+                <Typography paragraph>
+                  <img src='programming/seo.png' alt='seo' width={'100%'}></img>
+                </Typography>
+                </CardContent>
             </Collapse>
           </Card>
         </div>
@@ -379,15 +408,15 @@ function App() {
       </div>
       </div>
       </div>
-      <div id='jumpcareer' style={{paddingTop:'8vh'}}>
-        <h1>
+      <div id='jumpcareer' style={{paddingTop:'6vh'}}>
+        <h1 style={{textAlign:'center'}} className='test-font'>
           CAREER
         </h1>
       </div>
       <div class="timeline">
     <ul class="timeline-list">
         <li class="timeline-list-item">
-            <div class="date">2021年01月</div>
+            <div class="date">2020年11月</div>
             <div class="content">Pythonでの開発を始める</div>
         </li>
         <li class="timeline-list-item">
@@ -412,8 +441,63 @@ function App() {
         </li>
     </ul>
 </div>
-<div id='jumpabout' style={{paddingTop:'8vh'}}>
-  <h1>About</h1>
+<div id='jumpabout' style={{paddingTop:'6vh'}}>
+  <h1 style={{textAlign:'center'}} className='test-font'>About</h1>
+  <div style={{textAlign:'center'}}>
+    <img src="me/1.jpg" alt='me' width={'50%'} style={{borderRadius:'50%'}} ></img>
+  </div>
+  <div style={{paddingLeft:'20%',}}>
+  <p>
+    氏名 : 倉持純也 (くらもちじゅんや)  
+    </p>  
+    <p>
+      職業 : 大学4年生
+    </p>
+    <p>
+      趣味 : スノーボード
+    </p>
+    </div>
+    <div style={{paddingTop:'10%',paddingRight:"2%",paddingLeft:"2%",backgroundColor:'black'}}>  
+      <div>
+        <img src='me/6.jpg' alt='' width={'48%'} style={{paddingRight:'2%',verticalAlign:'middle' }}></img>
+        <img src="me/9.jpg" alt='' width={'48%'} style={{paddingLeft:'2%',verticalAlign:'middle'}}></img>
+      </div>
+      <div style={{paddingTop:'3%'}}>
+        <img src='me/5.jpg' alt='' width={'48%'} style={{paddingRight:'2%',verticalAlign:'middle'}}></img>
+        <img src="me/4.jpg" alt='' width={'48%'} style={{paddingLeft:'2%',verticalAlign:'middle'}}></img>
+      </div>
+      <div style={{paddingTop:'3%',paddingBottom:'3%'}}>
+        <img src='me/2.jpg' alt='' width={'48%'} style={{paddingRight:'2%',verticalAlign:'middle'}}></img>
+        <img src="me/7.jpg" alt='' width={'48%'} style={{paddingLeft:'2%',verticalAlign:'middle'}}></img>
+      </div>
+    </div>
+   <div style={{textAlign:'center'}}>
+   <IconButton
+                variant="outlined"
+                href="https://github.com/JUNYA-727"
+                style={{ zIndex: 1 }}
+              >
+                <GitHubIcon style={{color:'black'}} fontSize="medium"></GitHubIcon>
+              </IconButton>
+              <IconButton
+                variant="outlined"
+                href="https://www.instagram.com/junyq_/"
+                style={{ zIndex: 1 }}
+              >
+                <InstagramIcon
+                  color="secondary"
+                  fontSize="medium"
+                ></InstagramIcon>
+              </IconButton>
+              <IconButton
+                variant="outlined"
+                href="https://twitter.com/JUNY4_"
+                style={{ zIndex: 1 }}
+              >
+                <TwitterIcon color="primary" fontSize="medium"></TwitterIcon>
+              </IconButton>
+
+    </div>
 </div>
     </>
   );

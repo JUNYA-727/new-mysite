@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Noto+Sans+JP:wght@100;300&family=Shadows+Into+Light&display=swap');
+
+.main-header{
+  font-family: 'Lora', serif;
+}
+.test-font{
+  font-family: 'Shadows Into Light', cursive;
+}
+.content-font{
+  font-family: 'Yu Gothic'
+}
 .skill-card{
   padding-top: 5%;
   padding-bottom: 5%;
