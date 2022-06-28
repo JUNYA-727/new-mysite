@@ -67,3 +67,93 @@ body{
   border-radius: 10px;
   z-index: 1;
 }
+.fadeup1{
+  animation-name:fadeup;
+  animation-duration: 4s;
+}
+  @keyframes fadeup{
+      from{
+          opacity: 0;
+          transform:translateY(10px)
+      }
+      to{
+          opacity: 1;
+          transform: translateY(0px);
+      }
+
+  }
+.fadeup2{
+  animation-name:fadeup;
+  animation-duration: 13s;
+}
+  @keyframes fadeup{
+      from{
+          opacity: 0;
+          transform:translateY(10px)
+      }
+      to{
+          opacity: 1;
+          transform: translateY(0px);
+      }
+
+  }
+.fadeup3{
+  animation-name:fadeup;
+  animation-duration: 8s;
+}
+  @keyframes fadeup{
+      from{
+          opacity: 0;
+          transform:translateY(10px)
+      }
+      to{
+          opacity: 1;
+          transform: translateY(0px);
+      }
+
+  }
+  .fadeup4{
+    animation-name:fadeup;
+    animation-duration: 3s;
+  }
+    @keyframes fadeup{
+        from{
+            opacity: 0;
+            transform:translateY(10px)
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+  
+    }
+    .fadeup5{
+      animation-name:fadeup;
+      animation-duration: 4s;
+    }
+      @keyframes fadeup{
+          from{
+              opacity: 0;
+              transform:translateY(10px)
+          }
+          to{
+              opacity: 1;
+              transform: translateY(0px);
+          }
+    
+      }
+      .fadeup6{
+        animation-name:fadeup;
+        animation-duration: 10s;
+      }
+        @keyframes fadeup{
+            from{
+                opacity: 0;
+                transform:translateY(10px)
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+      
+        }

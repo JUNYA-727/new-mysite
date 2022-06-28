@@ -37,6 +37,8 @@ import { Link as Scroll } from "react-scroll";
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import LanguageIcon from '@mui/icons-material/Language';
+import {useInView} from 'react-intersection-observer'; 
 
 function App() {
   const [state, setState] = React.useState({
@@ -103,6 +105,7 @@ function App() {
         </ListItem>
         </Scroll>
       </List>
+      <Divider/>
       <List>
         <Scroll to="jumpabout" smooth='true' onClick={toggleDrawer(anchor,false)}>
         <ListItem>
@@ -143,6 +146,11 @@ function App() {
   const handleExpandClick3=()=>{
     setExpanded3(!expanded3);
   }
+
+  const[ref1,inview1]=useInView({
+    rootMargin:'-1px',
+    triggerOnce:true
+  })
   return (
     <>
     <div id='jumphome' style={{backgroundColor:'black',width:'100%'}}>
@@ -247,7 +255,7 @@ function App() {
               </Typography>
             </CardContent>
             <CardActions disableSpacing>
-              <IconButton>
+              <IconButton href="https://github.com/JUNYA-727/bitcoin_lightgbm_model">
                 <GitHubIcon />
               </IconButton>
               <ExpandMore
@@ -308,8 +316,11 @@ function App() {
               </Typography>
             </CardContent>
             <CardActions disableSpacing>
-              <IconButton>
-                <GitHubIcon />
+              <IconButton herf='https://github.com/JUNYA-727/medical-site'>
+                <GitHubIcon/>
+              </IconButton>
+              <IconButton herf='https://medical-site-ten.vercel.app/'>
+                <LanguageIcon/>
               </IconButton>
               <ExpandMore
                 expand={expanded1}
@@ -349,9 +360,6 @@ function App() {
               </Typography>
             </CardContent>
             <CardActions disableSpacing>
-              <IconButton>
-                <GitHubIcon />
-              </IconButton>
               <ExpandMore
                 expand={expanded2}
                 onClick={handleExpandClick2}
@@ -441,7 +449,7 @@ function App() {
         </li>
     </ul>
 </div>
-<div id='jumpabout' style={{paddingTop:'6vh'}}>
+<div id='jumpabout' ref={ref1} style={{paddingTop:'6vh'}}>
   <h1 style={{textAlign:'center'}} className='test-font'>About</h1>
   <div className="about-main">
     <div style={{textAlign:'center'}}>
@@ -460,20 +468,25 @@ function App() {
     </div>
     <div style={{paddingTop:'10%',paddingRight:"2%",paddingLeft:"2%",paddingBottom:'10%'}}>  
       <div>
-        <img src='me/6.jpg' alt='' width={'48%'} style={{paddingRight:'2%',verticalAlign:'middle' }}></img>
-        <img src="me/9.jpg" alt='' width={'48%'} style={{paddingLeft:'2%',verticalAlign:'middle'}}></img>
+        {inview1&&(
+        <img src='me/6.jpg' alt='' width={'48%'} style={{paddingRight:'2%',verticalAlign:'middle' }} className='fadeup1'></img>)}
+
+        {inview1&&(<img src="me/9.jpg" alt='' width={'48%'} style={{paddingLeft:'2%',verticalAlign:'middle'}} className='fadeup2'></img>)}
       </div>
       <div style={{paddingTop:'3%'}}>
-        <img src='me/5.jpg' alt='' width={'48%'} style={{paddingRight:'2%',verticalAlign:'middle'}}></img>
-        <img src="me/4.jpg" alt='' width={'48%'} style={{paddingLeft:'2%',verticalAlign:'middle'}}></img>
+        {inview1&&(
+        <img src='me/5.jpg' alt='' width={'48%'} style={{paddingRight:'2%',verticalAlign:'middle'}} className='fadeup3'></img>)}
+        {inview1&&(<img src="me/4.jpg" alt='' width={'48%'} style={{paddingLeft:'2%',verticalAlign:'middle'}} className='fadeup4'></img>)}
       </div>
       <div style={{paddingTop:'3%'}}>
-        <img src='me/2.jpg' alt='' width={'48%'} style={{paddingRight:'2%',verticalAlign:'middle'}}></img>
-        <img src="me/7.jpg" alt='' width={'48%'} style={{paddingLeft:'2%',verticalAlign:'middle'}}></img>
+        {inview1&&(<img src='me/2.jpg' alt='' width={'48%'} style={{paddingRight:'2%',verticalAlign:'middle'}} className='fadeup5'></img>)}
+        {inview1&&(<img src="me/7.jpg" alt='' width={'48%'} style={{paddingLeft:'2%',verticalAlign:'middle'}} className='fadeup6'></img>)}
       </div>
+      
     </div>
     </div>
-   <div style={{textAlign:'center',backgroundColor:'black'}}>å
+    </div>
+   <div style={{textAlign:'center',backgroundColor:'black',paddingBottom:'2%'}}>
     <p style={{color:'white',margin:'0',fontSize:'3vw',paddingTop:'1%'}}>Junya Kuramochi</p>   
    <IconButton
                 variant="outlined"
@@ -510,7 +523,7 @@ function App() {
                   fontSize="meduim"
                 ></InstagramIcon>
               </IconButton>
-    </div>
+
 </div>
     </>
   );
