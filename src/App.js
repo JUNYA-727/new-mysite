@@ -330,10 +330,10 @@ function App() {
               </Typography>
             </CardContent>
             <CardActions disableSpacing>
-              <IconButton herf='https://github.com/JUNYA-727/medical-site'>
+              <IconButton href="https://github.com/JUNYA-727/medical-site">
                 <GitHubIcon/>
               </IconButton>
-              <IconButton herf='https://medical-site-ten.vercel.app/'>
+              <IconButton href='https://medical-site-ten.vercel.app/'>
                 <LanguageIcon/>
               </IconButton>
               <ExpandMore
