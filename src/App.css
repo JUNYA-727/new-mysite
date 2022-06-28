@@ -181,6 +181,6 @@ animation: border_anim 2s linear forwards;
       
         }
 .div-last{
-  background: radial-gradient(circle, rgba(0,0,0,1) 54%, rgba(41,67,96,1) 82%, rgba(89,119,152,1) 93%, rgba(59,84,99,1) 100%, rgba(0,209,255,1) 100%);
+  background: radial-gradient(circle, rgba(0,0,0,1) 85%, rgba(41,67,96,1) 90%, rgba(59,84,99,1) 95%, rgba(89,119,152,1) 100%);
 
 }

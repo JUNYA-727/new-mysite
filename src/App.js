@@ -163,16 +163,8 @@ function App() {
   })
   const [ref4,inview4]=useInView({
     rootMargin:'-1px',
-    triggerOnce:false
+    triggerOnce:true
   })
-  const [ref5,inview5]=useInView({
-    rootMargin:'-1px',
-    triggerOnce:false
-  })
-  const [ref6,inview6]=useInView({
-    rootMargin:'-1px',
-    triggerOnce:false
-  }) 
   return (
     <>
     <div id='jumphome' style={{backgroundColor:'black',width:'100%'}}>
@@ -257,11 +249,9 @@ function App() {
       </div>
 
       <div id="jumpskill" ref={ref4} style={{backgroundColor:'white',paddingTop:'6vh'}}>
-      <div>
         {inview4&&(
         <h1 style={{color:'black',textAlign:'center'}} className='border'>SKILL</h1>
         )}
-        </div>
       <div style={{ textAlign: "center",backgroundColor:'white'}}>
         <div className="skill-card">
           <Card sx={{ maxWidth: 300 }} style={{ margin: "auto" }}>
@@ -440,14 +430,12 @@ function App() {
       </div>
       </div>
       </div>
-      <div id='jumpcareer' style={{paddingTop:'6vh'}} ref={ref5}>
-        <div ref={ref2} >
-          {inview5&&(
+      <div id='jumpcareer' style={{paddingTop:'6vh'}} ref={ref2}>
+          {inview2&&(
         <h1 style={{textAlign:'center'}} className='border'>
           CAREER
         </h1>
           )}
-        </div>
       </div>
       {inview2&&(
         <div className="fadeup5">
@@ -480,12 +468,10 @@ function App() {
     </ul>
     </div>
 </div>)}
-<div id='jumpabout' ref={ref6} style={{paddingTop:'6vh'}}>
-  <div ref={ref1}>
-    {inview6&&(
+<div id='jumpabout' ref={ref1} style={{paddingTop:'6vh'}}>
+    {inview1&&(
   <h1 style={{textAlign:'center'}} className='border'>About</h1>
   )}
-  </div>
   <div className="about-main">
     <div style={{textAlign:'center'}}>
     <img src="me/1.jpg" alt='me' width={'50%'} style={{borderRadius:'50%'}} ></img>
