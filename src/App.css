@@ -9,6 +9,10 @@
 .content-font{
   font-family: 'Yu Gothic'
 }
+.about-main{
+  padding-top: 20%;
+  background:linear-gradient(100deg,white 40%,#d5dade 70%);
+}
 .skill-card{
   padding-top: 5%;
   padding-bottom: 5%;

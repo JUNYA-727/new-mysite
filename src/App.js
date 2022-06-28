@@ -443,10 +443,11 @@ function App() {
 </div>
 <div id='jumpabout' style={{paddingTop:'6vh'}}>
   <h1 style={{textAlign:'center'}} className='test-font'>About</h1>
-  <div style={{textAlign:'center'}}>
+  <div className="about-main">
+    <div style={{textAlign:'center'}}>
     <img src="me/1.jpg" alt='me' width={'50%'} style={{borderRadius:'50%'}} ></img>
   </div>
-  <div style={{paddingLeft:'20%',}}>
+  <div style={{paddingLeft:'20%',fontSize:'3vw',margin:'0'}}>
   <p>
     氏名 : 倉持純也 (くらもちじゅんや)  
     </p>  
@@ -457,7 +458,7 @@ function App() {
       趣味 : スノーボード
     </p>
     </div>
-    <div style={{paddingTop:'10%',paddingRight:"2%",paddingLeft:"2%",backgroundColor:'black'}}>  
+    <div style={{paddingTop:'10%',paddingRight:"2%",paddingLeft:"2%",paddingBottom:'10%'}}>  
       <div>
         <img src='me/6.jpg' alt='' width={'48%'} style={{paddingRight:'2%',verticalAlign:'middle' }}></img>
         <img src="me/9.jpg" alt='' width={'48%'} style={{paddingLeft:'2%',verticalAlign:'middle'}}></img>
@@ -466,18 +467,21 @@ function App() {
         <img src='me/5.jpg' alt='' width={'48%'} style={{paddingRight:'2%',verticalAlign:'middle'}}></img>
         <img src="me/4.jpg" alt='' width={'48%'} style={{paddingLeft:'2%',verticalAlign:'middle'}}></img>
       </div>
-      <div style={{paddingTop:'3%',paddingBottom:'3%'}}>
+      <div style={{paddingTop:'3%'}}>
         <img src='me/2.jpg' alt='' width={'48%'} style={{paddingRight:'2%',verticalAlign:'middle'}}></img>
         <img src="me/7.jpg" alt='' width={'48%'} style={{paddingLeft:'2%',verticalAlign:'middle'}}></img>
       </div>
     </div>
-   <div style={{textAlign:'center'}}>
+    </div>
+   <div style={{textAlign:'center',backgroundColor:'black'}}>
+    <p style={{color:'white',margin:'0',fontSize:'1vw'}}>Thank you watching!</p>
+    <p style={{color:'white',margin:'0',fontSize:'3vw',paddingTop:'3%'}}>Junya Kuramochi</p>   
    <IconButton
                 variant="outlined"
                 href="https://github.com/JUNYA-727"
                 style={{ zIndex: 1 }}
               >
-                <GitHubIcon style={{color:'black'}} fontSize="medium"></GitHubIcon>
+                <GitHubIcon style={{color:'white'}} fontSize="medium"></GitHubIcon>
               </IconButton>
               <IconButton
                 variant="outlined"
@@ -496,7 +500,17 @@ function App() {
               >
                 <TwitterIcon color="primary" fontSize="medium"></TwitterIcon>
               </IconButton>
-
+    <p style={{color:'white',margin:'0',fontSize:'3vw',paddingTop:'1%'}}>Photo : Yuta Hatanaka</p>
+    <IconButton
+                variant="outlined"
+                href="https://www.instagram.com/hata_0722_photo/"
+                style={{ zIndex: 1 }}
+              >
+                <InstagramIcon
+                  color="secondary"
+                  fontSize="meduim"
+                ></InstagramIcon>
+              </IconButton>
     </div>
 </div>
     </>
