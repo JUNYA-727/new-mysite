@@ -12,6 +12,29 @@ body{
 .test-font{
   font-family: 'Shadows Into Light', cursive;
 }
+.border{
+  position: relative;
+  color:black;
+  font-family: 'Shadows Into Light', cursive;
+}
+.border:before{
+content: '';
+position: absolute;
+left:20%;
+bottom: 0;
+border-bottom: 3px solid;
+border-image: linear-gradient(to right,rgba(0,0,0,1) 30%, rgba(8,102,204,1) 65%,rgba(0,209,255,1) 100%);
+border-image-slice: 1;
+animation: border_anim 2s linear forwards;
+}
+@keyframes border_anim {
+0%{
+  width: 0%;
+}
+100%{
+  width: 60%;
+}
+}
 .content-font{
   font-family: 'Yu Gothic'
 }
@@ -157,3 +180,7 @@ body{
             }
       
         }
+.div-last{
+  background: radial-gradient(circle, rgba(0,0,0,1) 54%, rgba(41,67,96,1) 82%, rgba(89,119,152,1) 93%, rgba(59,84,99,1) 100%, rgba(0,209,255,1) 100%);
+
+}

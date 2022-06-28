@@ -39,6 +39,8 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LanguageIcon from '@mui/icons-material/Language';
 import {useInView} from 'react-intersection-observer'; 
+import { findAllByDisplayValue } from "@testing-library/react";
+import { useThemeWithoutDefault } from "@mui/system";
 
 function App() {
   const [state, setState] = React.useState({
@@ -151,12 +153,32 @@ function App() {
     rootMargin:'-1px',
     triggerOnce:true
   })
+  const [ref2,inview2]=useInView({
+    rootMargin:'-1px',
+    triggerOnce:true
+  })
+  const [ref3,inview3]=useInView({
+    rootMargin:'-1px',
+    triggerOnce:true
+  })
+  const [ref4,inview4]=useInView({
+    rootMargin:'-1px',
+    triggerOnce:false
+  })
+  const [ref5,inview5]=useInView({
+    rootMargin:'-1px',
+    triggerOnce:false
+  })
+  const [ref6,inview6]=useInView({
+    rootMargin:'-1px',
+    triggerOnce:false
+  }) 
   return (
     <>
     <div id='jumphome' style={{backgroundColor:'black',width:'100%'}}>
       <div style={{ display: "flex", height: "8vh", backgroundColor: "black",position:'fixed',width:'100%',zIndex:'2'}}>
         <div>
-          <h1 style={{ fontSize: "3vh", color: "white",paddingLeft:'3vw'}} className='main-header'>Junya Kuramochi</h1>
+          <h1 style={{ fontSize: "3vh", color: "white",paddingLeft:'5vw'}} className='main-header'>Junya Kuramochi</h1>
         </div>
         <div style={{ marginLeft: "auto" }}>
           <React.Fragment key={"top"}>
@@ -234,10 +256,12 @@ function App() {
         </div>
       </div>
 
-      <div id="jumpskill" style={{backgroundColor:'white',paddingTop:'6vh'}}>
-      <div  >
-        <h1 style={{color:'black',textAlign:'center'}} className='test-font'>SKILL</h1>
-      </div>
+      <div id="jumpskill" ref={ref4} style={{backgroundColor:'white',paddingTop:'6vh'}}>
+      <div>
+        {inview4&&(
+        <h1 style={{color:'black',textAlign:'center'}} className='border'>SKILL</h1>
+        )}
+        </div>
       <div style={{ textAlign: "center",backgroundColor:'white'}}>
         <div className="skill-card">
           <Card sx={{ maxWidth: 300 }} style={{ margin: "auto" }}>
@@ -416,11 +440,17 @@ function App() {
       </div>
       </div>
       </div>
-      <div id='jumpcareer' style={{paddingTop:'6vh'}}>
-        <h1 style={{textAlign:'center'}} className='test-font'>
+      <div id='jumpcareer' style={{paddingTop:'6vh'}} ref={ref5}>
+        <div ref={ref2} >
+          {inview5&&(
+        <h1 style={{textAlign:'center'}} className='border'>
           CAREER
         </h1>
+          )}
+        </div>
       </div>
+      {inview2&&(
+        <div className="fadeup5">
       <div class="timeline">
     <ul class="timeline-list">
         <li class="timeline-list-item">
@@ -429,7 +459,7 @@ function App() {
         </li>
         <li class="timeline-list-item">
             <div class="date">2021年12月</div>
-            <div class="content">SIGNASTEにおいて異常物体検出コンペで入賞する｡</div>
+            <div class="content">SIGNATEにおいて異常物体検出コンペで入賞する｡</div>
         </li>
         <li class="timeline-list-item">
             <div class="date">2022年03月</div>
@@ -448,14 +478,19 @@ function App() {
             <div class="content">外資コンサルにてエンジニアで就業予定｡</div>
         </li>
     </ul>
-</div>
-<div id='jumpabout' ref={ref1} style={{paddingTop:'6vh'}}>
-  <h1 style={{textAlign:'center'}} className='test-font'>About</h1>
+    </div>
+</div>)}
+<div id='jumpabout' ref={ref6} style={{paddingTop:'6vh'}}>
+  <div ref={ref1}>
+    {inview6&&(
+  <h1 style={{textAlign:'center'}} className='border'>About</h1>
+  )}
+  </div>
   <div className="about-main">
     <div style={{textAlign:'center'}}>
     <img src="me/1.jpg" alt='me' width={'50%'} style={{borderRadius:'50%'}} ></img>
   </div>
-  <div style={{paddingLeft:'20%',fontSize:'3vw',margin:'0'}}>
+  <div style={{paddingLeft:'20%',fontSize:'3vw',margin:'0',paddingTop:'10%'}}>
   <p>
     氏名 : 倉持純也 (くらもちじゅんや)  
     </p>  
@@ -486,7 +521,9 @@ function App() {
     </div>
     </div>
     </div>
-   <div style={{textAlign:'center',backgroundColor:'black',paddingBottom:'2%'}}>
+   <div ref={ref3} style={{textAlign:'center',paddingBottom:'2%'}} className='div-last'>
+    {inview3&&(
+      <div className='fadeup5'>
     <p style={{color:'white',margin:'0',fontSize:'3vw',paddingTop:'1%'}}>Junya Kuramochi</p>   
    <IconButton
                 variant="outlined"
@@ -523,7 +560,7 @@ function App() {
                   fontSize="meduim"
                 ></InstagramIcon>
               </IconButton>
-
+    </div>)}
 </div>
     </>
   );
