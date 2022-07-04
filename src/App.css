@@ -1,4 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Noto+Sans+JP:wght@100;300&family=Shadows+Into+Light&display=swap');
+html{
+  height: -webkit-fill-available;
+}
+body{
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+.main-header{
+  font-family: 'Lora', serif;
+}
+.test-font{
+  font-family: 'Shadows Into Light', cursive;
+}
+.border{
+  position: relative;
+  color:black;
+  font-family: 'Shadows Into Light', cursive;
+}
+.border:before{
+content: '';
+position: absolute;
+left:20%;
+bottom: 0;
+border-bottom: 3px solid;
+border-image: linear-gradient(to right,rgba(0,0,0,1) 30%, rgba(8,102,204,1) 65%,rgba(0,209,255,1) 100%);
+border-image-slice: 1;
+animation: border_anim 2s linear forwards;
+}
+@keyframes border_anim {
+0%{
+  width: 0%;
+}
+100%{
+  width: 60%;
+}
+}
+.content-font{
+  font-family: 'Yu Gothic'
+}
+.about-main{
+  padding-top: 20%;
+  background:linear-gradient(100deg,white 40%,#d5dade 70%);
+}
 .skill-card{
   padding-top: 5%;
   padding-bottom: 5%;
+}
+.timeline {
+  width: 96%;
+  max-width: 940px;
+  margin: 28px auto;
+  border: 1px solid #eeeeee;
+
+}
+
+.timeline-list {
+  padding: 40px 0;
+}
+
+.timeline-list-item {
+  display: flex;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.timeline-list-item .date {
+  width: 35%;
+  padding: 0 0 0 20px;
+  color: #888888;
+  font-weight: bold;
+  font-size:13px
+}
+
+.timeline-list-item .content {
+  position: relative;
+  width: 80%;
+  padding: 0 20px 60px 30px;
+  border-left: 1px solid #aaaaaa;
+}
+
+.timeline-list-item .content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #00c2bc;
+  border-radius: 10px;
+  z-index: 1;
+}
+.fadeup1{
+  animation-name:fadeup;
+  animation-duration: 4s;
+}
+  @keyframes fadeup{
+      from{
+          opacity: 0;
+          transform:translateY(10px)
+      }
+      to{
+          opacity: 1;
+          transform: translateY(0px);
+      }
+
+  }
+.fadeup2{
+  animation-name:fadeup;
+  animation-duration: 13s;
+}
+  @keyframes fadeup{
+      from{
+          opacity: 0;
+          transform:translateY(10px)
+      }
+      to{
+          opacity: 1;
+          transform: translateY(0px);
+      }
+
+  }
+.fadeup3{
+  animation-name:fadeup;
+  animation-duration: 11ds;
+}
+  @keyframes fadeup{
+      from{
+          opacity: 0;
+          transform:translateY(10px)
+      }
+      to{
+          opacity: 1;
+          transform: translateY(0px);
+      }
+
+  }
+  .fadeup4{
+    animation-name:fadeup;
+    animation-duration: 3s;
+  }
+    @keyframes fadeup{
+        from{
+            opacity: 0;
+            transform:translateY(10px)
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+  
+    }
+    .fadeup5{
+      animation-name:fadeup;
+      animation-duration: 4s;
+    }
+      @keyframes fadeup{
+          from{
+              opacity: 0;
+              transform:translateY(10px)
+          }
+          to{
+              opacity: 1;
+              transform: translateY(0px);
+          }
+    
+      }
+      .fadeup6{
+        animation-name:fadeup;
+        animation-duration: 15s;
+      }
+        @keyframes fadeup{
+            from{
+                opacity: 0;
+                transform:translateY(10px)
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+      
+        }
+.div-last{
+  background: radial-gradient(circle, rgba(0,0,0,1) 85%, rgba(41,67,96,1) 90%, rgba(59,84,99,1) 95%, rgba(89,119,152,1) 100%);
+
 }
