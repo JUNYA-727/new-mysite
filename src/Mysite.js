@@ -173,6 +173,7 @@ function Mysite() {
   });
   return (
     <>
+      <div class="shutter1"></div>
       <div id="jumphome" style={{ backgroundColor: "black", width: "100%" }}>
         <div
           style={{

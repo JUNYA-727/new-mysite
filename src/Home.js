@@ -28,7 +28,9 @@ function Home() {
           }}
         >
           <div>
-            <p style={{ color: "white" }}>JUNYA KURAMOCHI</p>
+            <p style={{ color: "white" }} className="fadeup-home1">
+              JUNYA KURAMOCHI
+            </p>
           </div>
           <div
             style={{
@@ -36,6 +38,7 @@ function Home() {
               textAlign: "center",
               justifyContent: "center",
             }}
+            className="fadeup-home2"
           >
             <div style={{ paddingRight: "2%" }}>
               <div
@@ -73,7 +76,7 @@ function Home() {
                 </IconButton>
               </div>
             </div>
-            <div style={{ paddingLeft: "2%" }}>
+            <div style={{ paddingLeft: "2%", paddingRight: "2%" }}>
               <div
                 style={{
                   borderRadius: "20%",
@@ -96,7 +99,7 @@ function Home() {
                 }}
               >
                 <IconButton variant="outlined" href="/mysite">
-                  <TwitterIcon color="primary" fontSize="small"></TwitterIcon>
+                  <LanguageIcon color="success" fontSize="small"></LanguageIcon>
                 </IconButton>
               </div>
             </div>
