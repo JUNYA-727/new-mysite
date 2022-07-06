@@ -277,10 +277,10 @@ animation: border_anim 2s linear forwards;
 
 }
 .fadeup-home1{
-  animation-name:fadeup;
+  animation-name:fadeup1;
   animation-duration: 8s;
 }
-  @keyframes fadeup{
+  @keyframes fadeup1{
       from{
           opacity: 0;
           transform:translateY(100px)
@@ -292,10 +292,10 @@ animation: border_anim 2s linear forwards;
 
   }
   .fadeup-home2{
-    animation-name:fadeup;
+    animation-name:fadeup1;
     animation-duration: 9s;
   }
-    @keyframes fadeup{
+    @keyframes fadeup1{
         from{
             opacity: 0;
             transform:translateY(100px)

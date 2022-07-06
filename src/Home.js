@@ -53,7 +53,7 @@ function Home() {
                 >
                   <GitHubIcon
                     style={{ color: "white" }}
-                    fontSize="small"
+                    fontSize="medium"
                   ></GitHubIcon>
                 </IconButton>
               </div>
@@ -71,7 +71,7 @@ function Home() {
                 >
                   <InstagramIcon
                     color="secondary"
-                    fontSize="small"
+                    fontSize="medium"
                   ></InstagramIcon>
                 </IconButton>
               </div>
@@ -87,7 +87,7 @@ function Home() {
                   variant="outlined"
                   href="https://twitter.com/JUNY4_"
                 >
-                  <TwitterIcon color="primary" fontSize="small"></TwitterIcon>
+                  <TwitterIcon color="primary" fontSize="medium"></TwitterIcon>
                 </IconButton>
               </div>
             </div>
@@ -99,7 +99,10 @@ function Home() {
                 }}
               >
                 <IconButton variant="outlined" href="/mysite">
-                  <LanguageIcon color="success" fontSize="small"></LanguageIcon>
+                  <LanguageIcon
+                    color="success"
+                    fontSize="medium"
+                  ></LanguageIcon>
                 </IconButton>
               </div>
             </div>
