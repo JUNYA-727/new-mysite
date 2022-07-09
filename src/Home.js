@@ -13,7 +13,7 @@ function Home() {
     <>
       <div class="shutter">
         <Typical
-          steps={["Thank you coming!", 400]}
+          steps={["Thank you for visiting!", 400]}
           loop={1}
           className="home-p"
         ></Typical>
