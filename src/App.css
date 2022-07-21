@@ -271,7 +271,7 @@ animation: border_anim 2s linear forwards;
 
 }
 .main-home{
-  height:100vh;
+  height:110vh;
   background-color: #1e1e1e;
   margin:'auto'
 
@@ -283,7 +283,7 @@ animation: border_anim 2s linear forwards;
   @keyframes fadeup1{
       from{
           opacity: 0;
-          transform:translateY(500px)
+          transform:translateY(200px)
       }
       to{
           opacity: 1;
@@ -293,12 +293,12 @@ animation: border_anim 2s linear forwards;
   }
   .fadeup-home2{
     animation-name:fadeup1;
-    animation-duration: 11s;
+    animation-duration: 10s;
   }
     @keyframes fadeup1{
         from{
             opacity: 0;
-            transform:translateY(500px)
+            transform:translateY(200px)
         }
         to{
             opacity: 1;

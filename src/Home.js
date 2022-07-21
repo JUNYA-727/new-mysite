@@ -10,7 +10,8 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import { IconButton } from "@mui/material";
 function Home() {
   return (
-    <>
+    <> 
+    <body style={{backgroundColor:'blue'}}>
       <div class="shutter">
         <Typical
           steps={["Thank you for visiting!", 400]}
@@ -18,7 +19,6 @@ function Home() {
           className="home-p"
         ></Typical>
       </div>
-
       <div class="main-home">
         <div
           style={{
@@ -109,6 +109,7 @@ function Home() {
           </div>
         </div>
       </div>
+      </body>
     </>
   );
 }
